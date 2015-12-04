@@ -57,7 +57,7 @@ mb.controller('HomeCtrl', function($scope, $firebaseArray, $firebaseObject, $int
         $scope.data = $scope.list[index];
         $scope.temp.index = index;
     }
-    $scope.removeData = function(index, $interval) {
+    $scope.removeData = function(index) {
         $scope.onLine = $scope.onLine;
         var index = $scope.temp.index,
             item = $scope.list[index],
