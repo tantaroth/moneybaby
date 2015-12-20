@@ -1,0 +1,67 @@
+<style>
+    .loading {
+        display: table;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, .5);
+    }
+    .loading > div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .loading > div > div {
+        margin-left: auto;
+        margin-right: auto; 
+        width: 300px;
+        text-align: center;
+    }
+</style>
+<div class="box-header with-border">
+    <h3 class="box-title">Login Page</h3>
+    <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+            <i class="fa fa-minus"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+            <i class="fa fa-times"></i></button>
+    </div>
+</div>
+<div class="box-body">
+    <fieldset>
+        <legend>Oauth</legend>
+        <p>
+            <button class="btn btn-primary" ng-click="oauthLogin('facebook')">Facebook</button>
+            <button class="btn btn-primary" ng-click="oauthLogin('google')">Google</button>
+            <button class="btn btn-primary" ng-click="oauthLogin('twitter')">Twitter</button>
+            <button class="btn btn-primary" ng-click="oauthLogin('github')">GitHub</button>
+        </p>
+    </fieldset>
+    <form role="form">
+        <p class="form-group">
+            <label for="loginEmail">E-mail</label>
+            <input id="loginEmail" required name="email" type="email" ng-model="email" class="form-control" />
+        </p>
+        <p class="form-group">
+            <label for="loginPass">Password</label>
+            <input id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" />
+        </p>
+        <p class="form-group" ng-cloak ng-show="createMode">
+            <label for="loginConfirm">confirm pass</label>
+            <input id="loginConfirm" required name="confirm" type="password" ng-model="confirm" class="form-control" />
+        </p>
+        <p>
+            <button class="btn btn-primary" ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
+            <button class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
+            <button class="btn btn-primary" ng-cloak ng-show="createMode" ng-click="createAccount(email, pass, confirm)">Create Account</button>
+            <button class="btn btn-default" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+        </p>
+    </form>
+    <p ng-show="err" class="bg-danger">{{err}}</p>
+</div>
+<!-- /.box-body -->
+<div class="box-footer">
+    Footer
+</div>
+<!-- /.box-footer-->

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MoneyBaby</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+    <body ng-app="moneybaby" ng-cloak>
+        <div ng-controller="MainCtrl">
+            <a href="javascript:;" ng-click="changeLanguage('es')">Español</a> -
+            <a href="javascript:;" ng-click="changeLanguage('en')">English</a>
+        </div>
+        <ul>
+            <li><a href="#/">{{ 'HOME' | translate }}</a></li>
+            <li>
+                <a href="#/stock">{{ 'STOCK' | translate }}</a>
+                <ul>
+                    <li><a href="#/product">{{ 'PRODUCTS' | translate }}</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="container" ng-view></div>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+        <script src="assets/js/moneybaby.js"></script>
+        <script src="assets/js/factories/HomeFactory.js"></script>
+        <script src="assets/js/controllers/MainCtrl.js"></script>
+        <script src="assets/js/controllers/HomeCtrl.js"></script>
+        <script src="assets/js/controllers/StockCtrl.js"></script>
+        <script src="assets/js/controllers/ProductCtrl.js"></script>
+    </body>
+</html>

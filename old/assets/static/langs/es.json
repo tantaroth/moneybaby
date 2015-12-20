@@ -1,0 +1,15 @@
+{
+	"CONTENT": "contenido",
+	"HOME": "inicio",
+	"PRODUCTS": "productos",
+	"STOCK": "inventario",
+	"NAME": "nombre",
+	"EMAIL": "correo electrónico",
+	"PASSWORD": "contraseña",
+	"SEND": "enviar",
+	"SAVE": "guardar",
+	"DELETE": "eliminar",
+	"SEARCH": "buscar",
+	"SYNCHRONIZING": "sincronizando",
+	"OFFLINE": "Sin conexción a internet. Los registros guardados con internet no serán mostrados temporalmente."
+}
