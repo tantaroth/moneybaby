@@ -1,6 +1,6 @@
 {
   "firebase": "moneybaby",
-  "public": "public",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",
